@@ -1,0 +1,67 @@
+table {
+  margin-left: auto;
+  margin-right: auto;
+  border-spacing: 0;
+  background-color: silver;
+}
+
+input[type='button'] {
+  width: 100%;
+  padding: 20px 40px;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+}
+
+input[type='text'] {
+  padding: 20px 30px;
+  font-size: 27px;
+  font-weight: bold;
+  border: none;
+}
+
+#displayInput {
+  padding: 20px 30px;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  width: 23rem;
+  background-color: #858694;
+  text-align: right;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.diffColor {
+  background-color: #f5913e;
+}
+
+.silverColor {
+  background-color: #e0e0e0;
+}
+
+#displayInput::placeholder {
+  color: white;
+}
+
+.quote {
+  text-align: center;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 60px;
+}
+
+#cal-div1 {
+  display: inline-block;
+  margin: 28px;
+}
+
+#cal-div2 {
+  display: inline-block;
+  margin: 28px;
+  position: absolute;
+  top: 80px;
+  right: 100px;
+}
