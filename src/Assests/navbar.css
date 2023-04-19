@@ -1,0 +1,41 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 10px;
+  height: 50px;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  padding-right: 20px;
+}
+
+.nav-link {
+  border-right: 1px solid white;
+  padding-right: 10px;
+}
+
+.nav-link:nth-child(3) {
+  border: none;
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link a:hover {
+  border-radius: 5px;
+  background-color: #b1adaa;
+  padding: 8px;
+}
+
+.active {
+  border-radius: 5px;
+  background-color: #b1adaa;
+  padding: 8px;
+}
