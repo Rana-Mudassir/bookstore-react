@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
 
 export const categoriesSlice = createSlice({
@@ -7,12 +6,14 @@ export const categoriesSlice = createSlice({
     status: 'Under Construction',
   },
   reducers: {
-    checkStatus: (state) => {
-      state.status = 'Under Construction';
+    ctgrStatus: (state) => {
+      let CurrentStatus = state;
+      CurrentStatus = 'Under construction';
+      return CurrentStatus;
     },
   },
 });
 
-export const { checkStatus } = createSlice.actions;
+export const { ctgrStatus } = categoriesSlice.actions;
 
-export default createSlice.reducers;
+export default categoriesSlice.reducer;
