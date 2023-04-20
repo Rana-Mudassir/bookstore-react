@@ -1,7 +1,13 @@
 import React from 'react';
 
+function Books({
 // eslint-disable-next-line react/prop-types
-function Books({ title, author, button }) {
+  title, author, button, itemId, handleDelete,
+}) {
+  const handleClick = () => {
+    handleDelete(itemId);
+  };
+
   return (
     <>
       <tbody>
@@ -9,7 +15,7 @@ function Books({ title, author, button }) {
           <td>{title}</td>
           <td>{author}</td>
           <td>
-            <button type="button">{button}</button>
+            <button type="button" onClick={handleClick}>{button}</button>
           </td>
         </tr>
       </tbody>
