@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Books({
-// eslint-disable-next-line react/prop-types
   title, author, button, itemId, handleDelete,
 }) {
   const handleClick = () => {
@@ -22,5 +22,13 @@ function Books({
     </>
   );
 }
+
+Books.propTypes = {
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  button: PropTypes.string.isRequired,
+  itemId: PropTypes.string.isRequired,
+  handleDelete: PropTypes.func.isRequired,
+};
 
 export default Books;

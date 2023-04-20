@@ -12,7 +12,6 @@ function BookList() {
   const handleDelete = (id) => {
     dispatch(removeBook(id));
   };
-  // console.log('books', books[0].itemId);
   return (
     <>
       <table>
