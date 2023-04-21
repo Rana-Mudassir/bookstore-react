@@ -27,8 +27,7 @@ Books.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   button: PropTypes.string.isRequired,
-  // eslint-disable-next-line react/require-default-props
-  itemId: PropTypes.string,
+  itemId: PropTypes.string.isRequired,
   handleDelete: PropTypes.func.isRequired,
   category: PropTypes.string.isRequired,
 };

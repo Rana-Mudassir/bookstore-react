@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Books from './Books';
 import Form from './Form';
@@ -7,20 +7,7 @@ import { removeBook, fetchBooks } from '../redux/books/booksSlice';
 
 function BookList() {
   const dispatch = useDispatch();
-  const { books: data } = useSelector((state) => state.books);
-  const [books, setBooks] = useState([]);
-
-  useEffect(() => {
-    if (data) {
-      let newData = [];
-      Object.keys(data).forEach((key) => {
-        if (data[key]?.length) {
-          newData = [...newData, ...data[key]];
-        }
-      });
-      setBooks(newData);
-    }
-  }, [data]);
+  const { books } = useSelector((state) => state.books);
 
   useEffect(() => {
     dispatch(fetchBooks());
@@ -29,7 +16,6 @@ function BookList() {
   const handleDelete = (id) => {
     dispatch(removeBook(id));
   };
-  console.log('books', books);
   return (
     <>
       <table>
@@ -44,7 +30,7 @@ function BookList() {
         <tbody>
           {
             books.length > 0 && books.map((book) => (
-              <Books key={book.itemId} title={book.title} author={book.author} category={book.category} button="Remove" itemId={book.itemId} handleDelete={handleDelete} />
+              <Books key={book.item_id} title={book.title} author={book.author} category={book.category} button="Remove" itemId={book.item_id} handleDelete={handleDelete} />
             ))
           }
         </tbody>

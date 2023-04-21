@@ -24,7 +24,7 @@ function Form() {
   const handleClick = (e) => {
     e.preventDefault();
     const newBook = {
-      itemId: uuidv4(),
+      item_id: uuidv4(),
       ...book,
     };
     dispatch(addBook(newBook));
