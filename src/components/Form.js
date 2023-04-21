@@ -6,9 +6,9 @@ import { addBook } from '../redux/books/booksSlice';
 
 function Form() {
   const [book, setBook] = useState({
-    itemId: uuidv4(),
     title: '',
     author: '',
+    category: '',
   });
 
   const dispatch = useDispatch();
@@ -23,8 +23,12 @@ function Form() {
 
   const handleClick = (e) => {
     e.preventDefault();
-    setBook({ id: uuidv4(), title: '', author: '' });
-    dispatch(addBook(book));
+    const newBook = {
+      itemId: uuidv4(),
+      ...book,
+    };
+    dispatch(addBook(newBook));
+    setBook({ title: '', author: '', category: '' });
   };
 
   return (
@@ -46,6 +50,15 @@ function Form() {
             value={book.author}
             onChange={handleChange}
           />
+          <select name="category" value={book.category} onChange={handleChange}>
+            <option>Select Category</option>
+            <option>Crime and Thriller</option>
+            <option>Religious and Self-help</option>
+            <option>Humor</option>
+            <option>Fantasy</option>
+            <option>Sci-fi</option>
+            <option>Fiction</option>
+          </select>
           <button type="submit">Add Book</button>
         </form>
       </div>

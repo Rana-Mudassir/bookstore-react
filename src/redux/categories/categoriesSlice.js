@@ -1,16 +1,25 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const initialState = {
+  categories: [
+    'Mystery',
+    'Construction',
+    'Romance',
+    'Literary Fiction',
+    'Thriller',
+    'Economy',
+    'Mind',
+    'Love',
+    'Poetry',
+    'Comedy',
+  ],
+};
+
 export const categoriesSlice = createSlice({
   name: 'categories',
-  initialState: {
-    status: 'Under Construction',
-  },
+  initialState,
   reducers: {
-    ctgrStatus: (state) => {
-      let CurrentStatus = state;
-      CurrentStatus = 'Under construction';
-      return CurrentStatus;
-    },
+    ctgrStatus: (state, Action) => Boolean(state.categories.includes(Action.payload)),
   },
 });
 
