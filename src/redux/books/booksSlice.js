@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import axios from 'axios';
 
 const initialState = {
@@ -65,44 +64,3 @@ export const booksSlice = createSlice({
 });
 
 export default booksSlice.reducer;
-
-// export const bookSlice = createSlice({
-//   name: 'books',
-//   initialState,
-//   reducers: {
-//     addBook: (state, action) => {
-//       const book = {
-//         id: action.payload.item_id,
-//         title: action.payload.title,
-//         author: action.payload.author,
-//         category: action.payload.category,
-//       };
-//       state.books.push(book);
-//     },
-//     removeBook: (state, action) => ({
-//       ...state,
-//       books: state.books.filter((book) => book.id !== action.payload),
-//     }),
-//   },
-//   extraReducers: {
-//     [fetchBooks.pending]: (state) => {
-//       const updatedState = state;
-//       updatedState.books = [];
-//       return updatedState;
-//     },
-//     [fetchBooks.fulfilled]: (state, action) => {
-//       const updatedState = state;
-//       updatedState.books = action.payload;
-//       return updatedState;
-//     },
-//     [fetchBooks.rejected]: (state, action) => {
-//       const updatedState = state;
-//       updatedState.books = action.payload;
-//       return updatedState;
-//     },
-//   },
-// });
-
-// export const { addBook, removeBook } = bookSlice.actions;
-
-// export default bookSlice.reducer;
