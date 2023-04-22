@@ -1,5 +1,100 @@
-table {
+/* table {
   margin: 20px;
   text-align: center;
   width: 30%;
+} */
+
+/* bookList.css */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 8px;
+  font-weight: bold;
+  color: #6c757d;
+  border-bottom: 1px solid #ddd;
+}
+
+td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+button {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c82333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ced4da;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+select {
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ced4da;
+}
+
+select:focus {
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0069d9;
 }

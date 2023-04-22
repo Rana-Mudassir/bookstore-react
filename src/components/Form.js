@@ -33,15 +33,16 @@ function Form() {
 
   return (
     <>
-      <div className="wrapper">
-        <h2>Add new Book</h2>
-        <form onSubmit={handleClick}>
+      <h2 className="text-muted">Add New Book</h2>
+      <form onSubmit={handleClick}>
+        <div className="input-container">
           <input
             type="text"
             name="title"
             placeholder="Title"
             value={book.title}
             onChange={handleChange}
+            className="title-input"
           />
           <input
             type="text"
@@ -49,19 +50,21 @@ function Form() {
             placeholder="Author"
             value={book.author}
             onChange={handleChange}
+            className="author-input"
           />
-          <select name="category" value={book.category} onChange={handleChange}>
+          <select name="category" value={book.category} onChange={handleChange} className="category-select">
             <option>Select Category</option>
-            <option>Crime and Thriller</option>
-            <option>Religious and Self-help</option>
+            <option>Thriller</option>
+            <option>Religious</option>
             <option>Humor</option>
             <option>Fantasy</option>
             <option>Sci-fi</option>
             <option>Fiction</option>
           </select>
-          <button type="submit">Add Book</button>
-        </form>
-      </div>
+          <button type="submit" className="btn">Add BOOK</button>
+        </div>
+
+      </form>
     </>
   );
 }
