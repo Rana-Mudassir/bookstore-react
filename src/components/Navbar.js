@@ -5,16 +5,18 @@ import '../Assests/navbar.css';
 function Navbar() {
   return (
     <header>
-      <nav>
-        <h1>Books Store</h1>
-        <ul className="nav">
-          <li className="nav-link">
-            <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>Books</NavLink>
-          </li>
-          <li>
-            <NavLink to="/categories" className={({ isActive }) => (isActive ? 'active' : '')}>Categories</NavLink>
-          </li>
-        </ul>
+      <nav className="navbar">
+        <h1>Books Store CMS</h1>
+        <div className="nav-space-between">
+          <ul className="nav">
+            <li className="nav-link">
+              <NavLink to="/" className={window.location.pathname === '/' ? 'active' : ''}>Books</NavLink>
+            </li>
+            <li>
+              <NavLink id="navItem" to="/categories" className={window.location.pathname === '/categories' ? 'active' : ''}>Categories</NavLink>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
   );
